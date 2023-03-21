@@ -1,0 +1,540 @@
+systemd(1)─┬─ModemManager(762)─┬─{ModemManager}(786)
+           │                   └─{ModemManager}(788)
+           ├─NetworkManager(665)─┬─{NetworkManager}(738)
+           │                     └─{NetworkManager}(740)
+           ├─accounts-daemon(656)─┬─{accounts-daemon}(708)
+           │                      └─{accounts-daemon}(736)
+           ├─acpid(657)
+           ├─avahi-daemon(660)───avahi-daemon(696)
+           ├─colord(1283)─┬─{colord}(1286)
+           │              └─{colord}(1288)
+           ├─cron(661)
+           ├─cups-browsed(819)─┬─{cups-browsed}(871)
+           │                   └─{cups-browsed}(872)
+           ├─cupsd(781)
+           ├─dbus-daemon(663)
+           ├─fwupd(2077)─┬─{fwupd}(2078)
+           │             ├─{fwupd}(2079)
+           │             ├─{fwupd}(2080)
+           │             └─{fwupd}(2090)
+           ├─gdm3(784)─┬─gdm-session-wor(1342)─┬─gdm-wayland-ses(1412)─┬─gnome-+
+           │           │                       │                       ├─{gdm-w+
+           │           │                       │                       └─{gdm-w+
+           │           │                       ├─{gdm-session-wor}(1343)
+           │           │                       └─{gdm-session-wor}(1344)
+           │           ├─{gdm3}(789)
+           │           └─{gdm3}(791)
+           ├─gnome-keyring-d(1386)─┬─{gnome-keyring-d}(1387)
+           │                       ├─{gnome-keyring-d}(1402)
+           │                       └─{gnome-keyring-d}(1481)
+           ├─irqbalance(671)───{irqbalance}(693)
+           ├─kerneloops(835)
+           ├─kerneloops(844)
+           ├─networkd-dispat(672)
+           ├─packagekitd(1110)─┬─{packagekitd}(1111)
+           │                   └─{packagekitd}(1112)
+           ├─polkitd(673)─┬─{polkitd}(688)
+           │              └─{polkitd}(734)
+           ├─power-profiles-(676)─┬─{power-profiles-}(722)
+           │                      └─{power-profiles-}(737)
+           ├─rsyslogd(677)─┬─{rsyslogd}(699)
+           │               ├─{rsyslogd}(700)
+           │               └─{rsyslogd}(701)
+           ├─rtkit-daemon(889)─┬─{rtkit-daemon}(890)
+           │                   └─{rtkit-daemon}(891)
+           ├─snapd(678)─┬─{snapd}(875)
+           │            ├─{snapd}(876)
+           │            ├─{snapd}(877)
+           │            ├─{snapd}(878)
+           │            ├─{snapd}(880)
+           │            ├─{snapd}(929)
+           │            ├─{snapd}(930)
+           │            ├─{snapd}(945)
+           │            ├─{snapd}(946)
+           │            ├─{snapd}(952)
+           │            ├─{snapd}(978)
+           │            ├─{snapd}(1055)
+           │            ├─{snapd}(1062)
+           │            └─{snapd}(3409)
+           ├─switcheroo-cont(679)─┬─{switcheroo-cont}(724)
+           │                      └─{switcheroo-cont}(735)
+           ├─systemd(1351)─┬─(sd-pam)(1352)
+           │               ├─at-spi2-registr(1683)─┬─{at-spi2-registr}(1688)
+           │               │                       └─{at-spi2-registr}(1691)
+           │               ├─dbus-daemon(1369)
+           │               ├─dconf-service(1646)─┬─{dconf-service}(1647)
+           │               │                     └─{dconf-service}(1648)
+           │               ├─evolution-addre(1661)─┬─{evolution-addre}(1662)
+           │               │                       ├─{evolution-addre}(1663)
+           │               │                       ├─{evolution-addre}(1665)
+           │               │                       ├─{evolution-addre}(1666)
+           │               │                       └─{evolution-addre}(1668)
+           │               ├─evolution-calen(1645)─┬─{evolution-calen}(1649)
+           │               │                       ├─{evolution-calen}(1650)
+           │               │                       ├─{evolution-calen}(1653)
+           │               │                       ├─{evolution-calen}(1654)
+           │               │                       ├─{evolution-calen}(1655)
+           │               │                       ├─{evolution-calen}(1657)
+           │               │                       ├─{evolution-calen}(1659)
+           │               │                       └─{evolution-calen}(1660)
+           │               ├─evolution-sourc(1637)─┬─{evolution-sourc}(1638)
+           │               │                       ├─{evolution-sourc}(1639)
+           │               │                       └─{evolution-sourc}(1640)
+           │               ├─gjs(1685)─┬─{gjs}(1689)
+           │               │           ├─{gjs}(1690)
+           │               │           ├─{gjs}(1692)
+           │               │           ├─{gjs}(1693)
+           │               │           ├─{gjs}(1694)
+           │               │           └─{gjs}(1695)
+           │               ├─gjs(1958)─┬─{gjs}(1960)
+           │               │           ├─{gjs}(1962)
+           │               │           ├─{gjs}(1968)
+           │               │           ├─{gjs}(1969)
+           │               │           ├─{gjs}(1970)
+           │               │           └─{gjs}(1971)
+           │               ├─gnome-session-b(1488)─┬─at-spi-bus-laun(1508)─┬─db+
+           │               │                       │                       ├─{a+
+           │               │                       │                       ├─{a+
+           │               │                       │                       └─{a+
+           │               │                       ├─evolution-alarm(1770)─┬─{e+
+           │               │                       │                       ├─{e+
+           │               │                       │                       ├─{e+
+           │               │                       │                       ├─{e+
+           │               │                       │                       └─{e+
+           │               │                       ├─gsd-disk-utilit(1766)─┬─{g+
+           │               │                       │                       └─{g+
+           │               │                       ├─update-notifier(3581)─┬─{u+
+           │               │                       │                       ├─{u+
+           │               │                       │                       └─{u+
+           │               │                       ├─{gnome-session-b}(1490)
+           │               │                       ├─{gnome-session-b}(1491)
+           │               │                       └─{gnome-session-b}(1495)
+           │               ├─gnome-session-c(1474)───{gnome-session-c}(1480)
+           │               ├─gnome-shell(1506)─┬─Xwayland(2660)
+           │               │                   ├─firefox(2570)─┬─Isolated Web C+
+           │               │                   │               ├─Isolated Web C+
+           │               │                   │               ├─Isolated Web C+
+           │               │                   │               ├─Isolated Web C+
+           │               │                   │               ├─Isolated Web C+
+           │               │                   │               ├─Isolated Web C+
+           │               │                   │               ├─Isolated Web C+
+           │               │                   │               ├─Isolated Web C+
+           │               │                   │               ├─Isolated Web C+
+           │               │                   │               ├─Isolated Web C+
+           │               │                   │               ├─Isolated Web C+
+           │               │                   │               ├─Privileged Con+
+           │               │                   │               ├─RDD Process(48+
+           │               │                   │               ├─Socket Process+
+           │               │                   │               ├─Utility Proces+
+           │               │                   │               ├─Web Content(64+
+           │               │                   │               ├─Web Content(65+
+           │               │                   │               ├─Web Content(65+
+           │               │                   │               ├─WebExtensions(+
+           │               │                   │               ├─{firefox}(2696+
+           │               │                   │               ├─{firefox}(2697+
+           │               │                   │               ├─{firefox}(2707+
+           │               │                   │               ├─{firefox}(2708+
+           │               │                   │               ├─{firefox}(2709+
+           │               │                   │               ├─{firefox}(2710+
+           │               │                   │               ├─{firefox}(2712+
+           │               │                   │               ├─{firefox}(2715+
+           │               │                   │               ├─{firefox}(2717+
+           │               │                   │               ├─{firefox}(2718+
+           │               │                   │               ├─{firefox}(2719+
+           │               │                   │               ├─{firefox}(2720+
+           │               │                   │               ├─{firefox}(2722+
+           │               │                   │               ├─{firefox}(2723+
+           │               │                   │               ├─{firefox}(2728+
+           │               │                   │               ├─{firefox}(2729+
+           │               │                   │               ├─{firefox}(2730+
+           │               │                   │               ├─{firefox}(2731+
+           │               │                   │               ├─{firefox}(2778+
+           │               │                   │               ├─{firefox}(2779+
+           │               │                   │               ├─{firefox}(2780+
+           │               │                   │               ├─{firefox}(2781+
+           │               │                   │               ├─{firefox}(2782+
+           │               │                   │               ├─{firefox}(2783+
+           │               │                   │               ├─{firefox}(2784+
+           │               │                   │               ├─{firefox}(2785+
+           │               │                   │               ├─{firefox}(2786+
+           │               │                   │               ├─{firefox}(2787+
+           │               │                   │               ├─{firefox}(2788+
+           │               │                   │               ├─{firefox}(2789+
+           │               │                   │               ├─{firefox}(2791+
+           │               │                   │               ├─{firefox}(2794+
+           │               │                   │               ├─{firefox}(2796+
+           │               │                   │               ├─{firefox}(2797+
+           │               │                   │               ├─{firefox}(2798+
+           │               │                   │               ├─{firefox}(2806+
+           │               │                   │               ├─{firefox}(2819+
+           │               │                   │               ├─{firefox}(2820+
+           │               │                   │               ├─{firefox}(2840+
+           │               │                   │               ├─{firefox}(2841+
+           │               │                   │               ├─{firefox}(2842+
+           │               │                   │               ├─{firefox}(2847+
+           │               │                   │               ├─{firefox}(2848+
+           │               │                   │               ├─{firefox}(2849+
+           │               │                   │               ├─{firefox}(2850+
+           │               │                   │               ├─{firefox}(2851+
+           │               │                   │               ├─{firefox}(2854+
+           │               │                   │               ├─{firefox}(2855+
+           │               │                   │               ├─{firefox}(2856+
+           │               │                   │               ├─{firefox}(2874+
+           │               │                   │               ├─{firefox}(2875+
+           │               │                   │               ├─{firefox}(2877+
+           │               │                   │               ├─{firefox}(2883+
+           │               │                   │               ├─{firefox}(2884+
+           │               │                   │               ├─{firefox}(2889+
+           │               │                   │               ├─{firefox}(3023+
+           │               │                   │               ├─{firefox}(3025+
+           │               │                   │               ├─{firefox}(3048+
+           │               │                   │               ├─{firefox}(3214+
+           │               │                   │               ├─{firefox}(3223+
+           │               │                   │               ├─{firefox}(3338+
+           │               │                   │               ├─{firefox}(3342+
+           │               │                   │               ├─{firefox}(3348+
+           │               │                   │               ├─{firefox}(3361+
+           │               │                   │               ├─{firefox}(3367+
+           │               │                   │               ├─{firefox}(3602+
+           │               │                   │               ├─{firefox}(3603+
+           │               │                   │               ├─{firefox}(3604+
+           │               │                   │               ├─{firefox}(3605+
+           │               │                   │               ├─{firefox}(3702+
+           │               │                   │               ├─{firefox}(3704+
+           │               │                   │               ├─{firefox}(3705+
+           │               │                   │               ├─{firefox}(3706+
+           │               │                   │               ├─{firefox}(3715+
+           │               │                   │               ├─{firefox}(3896+
+           │               │                   │               ├─{firefox}(3915+
+           │               │                   │               ├─{firefox}(3916+
+           │               │                   │               ├─{firefox}(3917+
+           │               │                   │               ├─{firefox}(3918+
+           │               │                   │               ├─{firefox}(3930+
+           │               │                   │               ├─{firefox}(3931+
+           │               │                   │               ├─{firefox}(3932+
+           │               │                   │               ├─{firefox}(3933+
+           │               │                   │               ├─{firefox}(3942+
+           │               │                   │               ├─{firefox}(3947+
+           │               │                   │               ├─{firefox}(4015+
+           │               │                   │               ├─{firefox}(4016+
+           │               │                   │               ├─{firefox}(4017+
+           │               │                   │               ├─{firefox}(4018+
+           │               │                   │               ├─{firefox}(4019+
+           │               │                   │               ├─{firefox}(4020+
+           │               │                   │               ├─{firefox}(4021+
+           │               │                   │               ├─{firefox}(4022+
+           │               │                   │               ├─{firefox}(4023+
+           │               │                   │               ├─{firefox}(4031+
+           │               │                   │               ├─{firefox}(4832+
+           │               │                   │               ├─{firefox}(4857+
+           │               │                   │               ├─{firefox}(4877+
+           │               │                   │               ├─{firefox}(5010+
+           │               │                   │               ├─{firefox}(5034+
+           │               │                   │               ├─{firefox}(5035+
+           │               │                   │               ├─{firefox}(5036+
+           │               │                   │               ├─{firefox}(5037+
+           │               │                   │               ├─{firefox}(5123+
+           │               │                   │               ├─{firefox}(5165+
+           │               │                   │               ├─{firefox}(5262+
+           │               │                   │               ├─{firefox}(5269+
+           │               │                   │               ├─{firefox}(6264+
+           │               │                   │               ├─{firefox}(6265+
+           │               │                   │               ├─{firefox}(6266+
+           │               │                   │               ├─{firefox}(6267+
+           │               │                   │               ├─{firefox}(6268+
+           │               │                   │               ├─{firefox}(6356+
+           │               │                   │               ├─{firefox}(6357+
+           │               │                   │               ├─{firefox}(6358+
+           │               │                   │               ├─{firefox}(6359+
+           │               │                   │               ├─{firefox}(6424+
+           │               │                   │               ├─{firefox}(6440+
+           │               │                   │               ├─{firefox}(6465+
+           │               │                   │               ├─{firefox}(6532+
+           │               │                   │               ├─{firefox}(6557+
+           │               │                   │               ├─{firefox}(6634+
+           │               │                   │               ├─{firefox}(6691+
+           │               │                   │               └─{firefox}(6757+
+           │               │                   ├─gjs(2022)─┬─{gjs}(2024)
+           │               │                   │           ├─{gjs}(2025)
+           │               │                   │           ├─{gjs}(2026)
+           │               │                   │           ├─{gjs}(2027)
+           │               │                   │           ├─{gjs}(2028)
+           │               │                   │           ├─{gjs}(2029)
+           │               │                   │           └─{gjs}(2033)
+           │               │                   ├─{gnome-shell}(1518)
+           │               │                   ├─{gnome-shell}(1521)
+           │               │                   ├─{gnome-shell}(1525)
+           │               │                   ├─{gnome-shell}(1535)
+           │               │                   ├─{gnome-shell}(1536)
+           │               │                   ├─{gnome-shell}(1537)
+           │               │                   ├─{gnome-shell}(1538)
+           │               │                   ├─{gnome-shell}(1539)
+           │               │                   ├─{gnome-shell}(1540)
+           │               │                   ├─{gnome-shell}(1541)
+           │               │                   ├─{gnome-shell}(1542)
+           │               │                   ├─{gnome-shell}(1543)
+           │               │                   ├─{gnome-shell}(1546)
+           │               │                   ├─{gnome-shell}(1572)
+           │               │                   ├─{gnome-shell}(1573)
+           │               │                   ├─{gnome-shell}(1574)
+           │               │                   ├─{gnome-shell}(1575)
+           │               │                   ├─{gnome-shell}(2694)
+           │               │                   └─{gnome-shell}(6240)
+           │               ├─gnome-shell-cal(1630)─┬─{gnome-shell-cal}(1632)
+           │               │                       ├─{gnome-shell-cal}(1634)
+           │               │                       ├─{gnome-shell-cal}(1635)
+           │               │                       ├─{gnome-shell-cal}(1636)
+           │               │                       └─{gnome-shell-cal}(1644)
+           │               ├─gnome-terminal-(3432)─┬─bash(3450)───java(3457)─┬─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         ├─+
+           │               │                       │                         └─+
+           │               │                       ├─bash(4065)───pstree(6870)
+           │               │                       ├─{gnome-terminal-}(3433)
+           │               │                       ├─{gnome-terminal-}(3435)
+           │               │                       └─{gnome-terminal-}(3436)
+           │               ├─goa-daemon(1570)─┬─{goa-daemon}(1576)
+           │               │                  ├─{goa-daemon}(1578)
+           │               │                  └─{goa-daemon}(1579)
+           │               ├─goa-identity-se(1583)─┬─{goa-identity-se}(1584)
+           │               │                       └─{goa-identity-se}(1586)
+           │               ├─gsd-a11y-settin(1698)─┬─{gsd-a11y-settin}(1703)
+           │               │                       ├─{gsd-a11y-settin}(1706)
+           │               │                       └─{gsd-a11y-settin}(1720)
+           │               ├─gsd-color(1701)─┬─{gsd-color}(1729)
+           │               │                 ├─{gsd-color}(1732)
+           │               │                 └─{gsd-color}(1744)
+           │               ├─gsd-datetime(1702)─┬─{gsd-datetime}(1734)
+           │               │                    ├─{gsd-datetime}(1759)
+           │               │                    └─{gsd-datetime}(1837)
+           │               ├─gsd-housekeepin(1704)─┬─{gsd-housekeepin}(1709)
+           │               │                       ├─{gsd-housekeepin}(1719)
+           │               │                       └─{gsd-housekeepin}(1757)
+           │               ├─gsd-keyboard(1705)─┬─{gsd-keyboard}(1725)
+           │               │                    ├─{gsd-keyboard}(1727)
+           │               │                    └─{gsd-keyboard}(1745)
+           │               ├─gsd-media-keys(1711)─┬─{gsd-media-keys}(1736)
+           │               │                      ├─{gsd-media-keys}(1739)
+           │               │                      └─{gsd-media-keys}(1746)
+           │               ├─gsd-power(1714)─┬─{gsd-power}(1738)
+           │               │                 ├─{gsd-power}(1742)
+           │               │                 └─{gsd-power}(1760)
+           │               ├─gsd-print-notif(1716)─┬─{gsd-print-notif}(1735)
+           │               │                       └─{gsd-print-notif}(1754)
+           │               ├─gsd-printer(1868)─┬─{gsd-printer}(1875)
+           │               │                   └─{gsd-printer}(1876)
+           │               ├─gsd-rfkill(1718)─┬─{gsd-rfkill}(1731)
+           │               │                  └─{gsd-rfkill}(1752)
+           │               ├─gsd-screensaver(1728)─┬─{gsd-screensaver}(1741)
+           │               │                       └─{gsd-screensaver}(1747)
+           │               ├─gsd-sharing(1733)─┬─{gsd-sharing}(1749)
+           │               │                   ├─{gsd-sharing}(1750)
+           │               │                   └─{gsd-sharing}(1767)
+           │               ├─gsd-smartcard(1748)─┬─{gsd-smartcard}(1756)
+           │               │                     ├─{gsd-smartcard}(1772)
+           │               │                     └─{gsd-smartcard}(1843)
+           │               ├─gsd-sound(1753)─┬─{gsd-sound}(1758)
+           │               │                 ├─{gsd-sound}(1765)
+           │               │                 └─{gsd-sound}(1839)
+           │               ├─gsd-wacom(1755)─┬─{gsd-wacom}(1761)
+           │               │                 ├─{gsd-wacom}(1764)
+           │               │                 └─{gsd-wacom}(1773)
+           │               ├─gsd-xsettings(2665)─┬─{gsd-xsettings}(2666)
+           │               │                     ├─{gsd-xsettings}(2667)
+           │               │                     └─{gsd-xsettings}(2669)
+           │               ├─gvfs-afc-volume(1557)─┬─{gvfs-afc-volume}(1558)
+           │               │                       ├─{gvfs-afc-volume}(1559)
+           │               │                       └─{gvfs-afc-volume}(1561)
+           │               ├─gvfs-goa-volume(1566)─┬─{gvfs-goa-volume}(1567)
+           │               │                       └─{gvfs-goa-volume}(1568)
+           │               ├─gvfs-gphoto2-vo(1589)─┬─{gvfs-gphoto2-vo}(1591)
+           │               │                       └─{gvfs-gphoto2-vo}(1593)
+           │               ├─gvfs-mtp-volume(1562)─┬─{gvfs-mtp-volume}(1563)
+           │               │                       └─{gvfs-mtp-volume}(1565)
+           │               ├─gvfs-udisks2-vo(1551)─┬─{gvfs-udisks2-vo}(1552)
+           │               │                       ├─{gvfs-udisks2-vo}(1553)
+           │               │                       └─{gvfs-udisks2-vo}(1555)
+           │               ├─gvfsd(1380)─┬─gvfsd-trash(1675)─┬─{gvfsd-trash}(16+
+           │               │             │                   └─{gvfsd-trash}(16+
+           │               │             ├─{gvfsd}(1381)
+           │               │             └─{gvfsd}(1383)
+           │               ├─gvfsd-fuse(1389)─┬─{gvfsd-fuse}(1397)
+           │               │                  ├─{gvfsd-fuse}(1398)
+           │               │                  ├─{gvfsd-fuse}(1399)
+           │               │                  ├─{gvfsd-fuse}(1400)
+           │               │                  └─{gvfsd-fuse}(1407)
+           │               ├─gvfsd-metadata(2081)─┬─{gvfsd-metadata}(2082)
+           │               │                      └─{gvfsd-metadata}(2083)
+           │               ├─ibus-portal(1800)─┬─{ibus-portal}(1801)
+           │               │                   └─{ibus-portal}(1805)
+           │               ├─ibus-x11(2689)─┬─{ibus-x11}(2691)
+           │               │                └─{ibus-x11}(2692)
+           │               ├─nautilus(2751)─┬─{nautilus}(2752)
+           │               │                ├─{nautilus}(2753)
+           │               │                ├─{nautilus}(2755)
+           │               │                ├─{nautilus}(2757)
+           │               │                └─{nautilus}(6868)
+           │               ├─pipewire(1358)───{pipewire}(1377)
+           │               ├─pipewire-media-(1359)───{pipewire-media-}(1375)
+           │               ├─pulseaudio(1360)─┬─{pulseaudio}(1486)
+           │               │                  ├─{pulseaudio}(1544)
+           │               │                  └─{pulseaudio}(1554)
+           │               ├─sh(1697)───ibus-daemon(1700)─┬─ibus-dconf(1787)─┬─+
+           │               │                              │                  ├─+
+           │               │                              │                  └─+
+           │               │                              ├─ibus-engine-sim(190+
+           │               │                              ├─ibus-extension-(179+
+           │               │                              ├─{ibus-daemon}(1707)
+           │               │                              └─{ibus-daemon}(1712)
+           │               ├─snap(2895)─┬─{snap}(2902)
+           │               │            ├─{snap}(2903)
+           │               │            ├─{snap}(2904)
+           │               │            ├─{snap}(2905)
+           │               │            ├─{snap}(2906)
+           │               │            ├─{snap}(2907)
+           │               │            ├─{snap}(2908)
+           │               │            └─{snap}(2909)
+           │               ├─snap-store(1806)─┬─{snap-store}(2015)
+           │               │                  ├─{snap-store}(2017)
+           │               │                  ├─{snap-store}(2018)
+           │               │                  └─{snap-store}(2074)
+           │               ├─snapd-desktop-i(1361)───snapd-desktop-i(1616)─┬─{s+
+           │               │                                               ├─{s+
+           │               │                                               └─{s+
+           │               ├─tracker-miner-f(1454)─┬─{tracker-miner-f}(1455)
+           │               │                       ├─{tracker-miner-f}(1456)
+           │               │                       ├─{tracker-miner-f}(1457)
+           │               │                       ├─{tracker-miner-f}(1462)
+           │               │                       └─{tracker-miner-f}(1598)
+           │               ├─xdg-desktop-por(1620)─┬─{xdg-desktop-por}(1621)
+           │               │                       ├─{xdg-desktop-por}(1622)
+           │               │                       ├─{xdg-desktop-por}(2001)
+           │               │                       ├─{xdg-desktop-por}(2030)
+           │               │                       └─{xdg-desktop-por}(2031)
+           │               ├─xdg-desktop-por(1624)─┬─{xdg-desktop-por}(1626)
+           │               │                       ├─{xdg-desktop-por}(1628)
+           │               │                       └─{xdg-desktop-por}(1631)
+           │               ├─xdg-desktop-por(2003)─┬─{xdg-desktop-por}(2005)
+           │               │                       ├─{xdg-desktop-por}(2007)
+           │               │                       └─{xdg-desktop-por}(2008)
+           │               ├─xdg-document-po(1403)─┬─fusermount3(1415)
+           │               │                       ├─{xdg-document-po}(1404)
+           │               │                       ├─{xdg-document-po}(1405)
+           │               │                       ├─{xdg-document-po}(1414)
+           │               │                       ├─{xdg-document-po}(1417)
+           │               │                       └─{xdg-document-po}(1418)
+           │               └─xdg-permission-(1406)─┬─{xdg-permission-}(1408)
+           │                                       └─{xdg-permission-}(1410)
+           ├─systemd-journal(262)
+           ├─systemd-logind(682)
+           ├─systemd-oomd(502)
+           ├─systemd-resolve(505)
+           ├─systemd-timesyn(506)───{systemd-timesyn}(566)
+           ├─systemd-udevd(295)
+           ├─udisksd(685)─┬─{udisksd}(703)
+           │              ├─{udisksd}(733)
+           │              ├─{udisksd}(783)
+           │              ├─{udisksd}(808)
+           │              └─{udisksd}(6869)
+           ├─unattended-upgr(768)───{unattended-upgr}(838)
+           ├─upowerd(1056)─┬─{upowerd}(1064)
+           │               └─{upowerd}(1065)
+           └─wpa_supplicant(686)
+
+
+
+(PODPUNKT C)
+
+Proces adoptujacy osierocone procesy to: systemd(1351)
+
+
+(PODPUNKT D)
+                                                       Macierzysty:  PID 6903 | PPID 6901 | PGID 6901
+                                                       |                                        |                               |                                                                        |
+                       (1) PID 6969 | PPID 6968 | PGID 6960         (1) PID 6970 | PPID 6968 | PGID 6960                (1)PPID 6968 | PGID 6960
+                                      |                   |                                         |
+            (2) PID 6972 | PPID 6969 | PGID 6960    (2) PID 6973 | PPID 6970 | PGID 6960        (2) PID 6974 | PPID 6969 | PGID 6960
+                        |
+                (3) PID 6975 | PPID 6972 | PGID 6960
+
+
+(PODPUNKT E)
+
+Jezeli bierzmy pod uwage proces macierzysty to: (2^n) - 1, bez procesu macierzystego 2^n, gdzie n jest liczba wywolan funckcji fork
+
+Po wywolaniu funkcji fork (ktora sluzy do tworzenia kopii biezaacego procesu), powstaje nowy proces, ktory jest kopia procesu przez ktory zostal wywolany
+Oba procesy wykonuja instroukcje od wywolania funkcji fork
+Przy pierwszym wywolaniu fork powstaje jeden dodatkowy proces, czyli mamy w sumie dwa procesy, przy drugim wywoalniu fork kaazdy z tych procesow tworzy swoja kopie co daje nam 4 porcesy, itd.
+
